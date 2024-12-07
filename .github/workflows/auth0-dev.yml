@@ -1,4 +1,4 @@
-iname: Deploy to Auth0 dev account
+name: Deploy to Auth0 dev account
 on:
   push:
     branches: [dev]
