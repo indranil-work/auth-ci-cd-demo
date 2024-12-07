@@ -2,13 +2,11 @@
   "name": "github-actions-auth0-deploy",
   "version": "1.0.0",
   "main": "index.js",
-  {
-    "scripts": {
+  "scripts": {
       "export:dev": "a0deploy export --strip --format yaml --output_folder . --config_file ./config/dev.json",
       "import:dev": "a0deploy import --input_file tenant.yaml --config_file ./config/dev.json",
       "import:staging": "a0deploy import --input_file tenant.yaml --config_file ./config/staging.json",
       "import:prod": "a0deploy import --input_file tenant.yaml --config_file ./config/prod.json"
-    }
   },
   "author": "",
   "license": "ISC",
