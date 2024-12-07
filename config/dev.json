@@ -1,0 +1,9 @@
+{
+  "AUTH0_DOMAIN": "ijdemo=dev.us.auth0.com",
+  "AUTH0_CLIENT_ID": "DRnut9H5YLitoCe62Hjy9vLCLMMQM3n1",
+  "AUTH0_ALLOW_DELETE": true,
+  "EXCLUDED_PROPS": {
+    "clients": ["client_secret"],
+    "connections": ["options.client_secret"]
+  }
+}

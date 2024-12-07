@@ -1,0 +1,24 @@
+{
+  "name": "Update user_metadata",
+  "actions": [
+    {
+      "id": "updateUser_j0M1",
+      "type": "AUTH0",
+      "action": "UPDATE_USER",
+      "allow_failure": false,
+      "mask_output": false,
+      "params": {
+        "connection_id": "REPLACE_WITH_M2M_CONNECTION",
+        "user_id": "{{context.user.user_id}}",
+        "changes": {
+          "user_metadata": {
+            "job_title": "{{fields.job_title}}",
+            "company_name": "{{fields.company_name}}",
+            "company_size": "{{fields.company_size}}",
+            "phone_number": "{{fields.phone_number.international_number}}"
+          }
+        }
+      }
+    }
+  ]
+}

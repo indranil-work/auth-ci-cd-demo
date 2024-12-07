@@ -1,0 +1,206 @@
+'
+<!DOCTYPE html>
+<html>
+    <head>
+        {%- auth0:head -%}
+        <style>
+            body._widget-auto-layout {
+                --page-background-image: url('https://ok2static.oktacdn.com/fs/bco/7/fs0103mxs32uBQMM10x8');
+                background-color: var(--page-background-color);
+                background-image: var(--page-background-image);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .footer{
+                background-color: #fff;
+                margin: auto;
+                font-size: 10px;
+                /*
+                ====== If we want scrolling ====
+                height: 75px;
+                overflow: auto;
+                */
+                font-family: proxima nova,Arial,Helvetica,sans-serif;
+                font-weight: 400;
+                line-height: 1;
+                color: #777;
+                border-bottom-left-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
+
+            .footer p{
+                margin: auto;
+            }
+            
+            .footer .copyright {
+                float: center;
+            }
+            
+            .footer .privacy-policy {
+                float: center;
+            }
+            
+            .footer .footer-container {
+            padding: 9px 15px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            }
+            
+            .footer a {
+            text-decoration: none;
+            color: #777;
+            }
+            
+            .footer a:hover {
+                text-decoration: underline;
+            }
+            
+            .button-primary {
+                color: #fff !important;
+            }
+            
+            #languageSelector {
+            /*outline: none;
+            border: none;*/
+            width: 75%;
+            margin: 0 auto 0 auto;
+            border-radius: 5px;
+            border-color: #777;
+            padding: 5px;
+            font-size: 13px;
+            font-family: inherit;
+            color: inherit;
+            }
+            
+            .dropdownContainer {
+            width: 90%;
+            display: flex;
+            font-size: 13px;
+            align-items: center;
+            justify-content: center;
+            -webkit-align-items: center;
+            flex-direction: row;
+            margin: 0 auto;
+            padding: 10px 0;
+            text-align: center;
+            }
+            
+            .flagRotation {
+            align-items: center;
+            color: #777;
+            width: 50%;
+            
+            }
+            .dropdown {
+            width: 100%;
+            }
+            
+            select{
+            background-color: white;
+            border: thin solid blue;
+            border-radius: 4px;
+            display: inline-block;
+
+            line-height: 1.5em;
+            padding: 0.5em 3.5em 0.5em 1em;
+            margin: 0;      
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            }
+            
+            select.minimal {
+            background-image:
+                linear-gradient(45deg, transparent 50%, gray 50%),
+                linear-gradient(135deg, gray 50%, transparent 50%),
+                linear-gradient(to right, #ccc, #ccc);
+            background-position:
+                calc(100% - 15px) calc(1em + 0px),
+                calc(100% - 10px) calc(1em + 0px),
+                calc(100% - 2.5em) 0.5em;
+            background-size: 5px 5px, 5px 5px, 1px 1.5em;
+            background-repeat: no-repeat;
+            width: 50%;
+            }
+
+            select.minimal:focus {
+                background-image:
+                linear-gradient(45deg, #2196f3 50%, transparent 50%),
+                linear-gradient(135deg, transparent 50%, #2196f3 50%),
+                linear-gradient(to right, #ccc, #ccc);
+                background-position:
+                    calc(100% - 10px) 1em,
+                    calc(100% - 15px) 1em,
+                    calc(100% - 2.5em) 0.5em;
+                background-size: 5px 5px, 5px 5px, 1px 1.5em;
+                background-repeat: no-repeat;
+                border-color: #2196f3;
+                outline: 0;
+            }
+
+            select:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 #000;
+            }
+        </style>
+        <title>{{ prompt.screen.texts.pageTitle }}</title>
+    </head>
+    <body class="_widget-auto-layout">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        {%- auth0:widget -%}
+        <script type="text/javascript">
+            var theLabel = $("[data-dynamic-label-for|='username']");
+            theLabel.text("Email");
+
+            var signUpLink = $(".ulp-alternate-action");
+            signUpLink.hide();
+
+            var nextButton = $(":submit")
+            nextButton.text("Next");
+
+            var rememberMe = document.createElement("div");
+            rememberMe.innerHTML = '<br><input type="checkbox" name="rememberMe" id="rememberMe"><label for="rememberMe">Keep me signed in</label><br>';
+
+            nextButton.before(rememberMe);
+
+            var helpLink = document.createElement("div");
+            helpLink.innerHTML = '<br><a href="https://sso.myid.disney.com/help/login">Help</a><br>';
+
+            nextButton.after(helpLink);
+
+            var footer = document.createElement("div");
+            footer.innerHTML =
+            `<div class="footer">
+                <div class="dropdownContainer">
+                    <label class="flagRotation">Change Language:</label>
+                    <div class="dropdown">
+                    <select id="languageSelector" class="minimal">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="de">Deutsche</option>
+                    </select>
+                    </div>
+                </div>
+  			    <div class="footer-container clearfix">
+    			    <p id="p1" class="copyright">The Walt Disney Company (“Disney” or “Company”) makes available certain Company-provided platforms and tools (“Platforms”) that enable employees and other authorized individuals (“you”) to access and share content from a computer or mobile device – with or without being on the Disney network. These Platforms are for authorized use only. All activity and communications on the Platforms, even if password-protected, may be reviewed, recorded, and disclosed subject to applicable law. Use of the Platforms, including for sharing or storing any Confidential Information, is governed by all applicable Disney policies. Any unauthorized use of any Platform may result in termination of access, disciplinary action up to and including employment termination, and/or legal action. </p>
+                    <br>
+                    <p id="p2" class="copyright">Pursuant to Disney policies, you must promptly report to Global Information Security any known or suspected loss or unauthorized disclosure of Company information. You understand that your personal data including your name and Disney email address may be sent to Platform providers in order to create and administer your account. The Platform provider may transfer your personal data and any posted content outside of your local territory.</p>
+    		    </div>
+    	    </div>`
+
+            /*$("#languageSelector").on('change', function() {
+              var newUrl = window.location.href + "&ui_locales=" + this.value;
+              window.location.href = newUrl;
+            });*/
+
+            helpLink.after(footer);
+
+
+        </script>
+    </body>
+</html>
+'

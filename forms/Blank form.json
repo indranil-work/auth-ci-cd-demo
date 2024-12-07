@@ -1,0 +1,49 @@
+{
+  "name": "Blank form",
+  "languages": {
+    "primary": "en"
+  },
+  "nodes": [
+    {
+      "id": "step_UJ67",
+      "type": "STEP",
+      "coordinates": {
+        "x": 500,
+        "y": 0
+      },
+      "alias": "New step",
+      "config": {
+        "components": [
+          {
+            "id": "next_button_wQrz",
+            "category": "BLOCK",
+            "type": "NEXT_BUTTON",
+            "config": {
+              "text": "Continue"
+            }
+          }
+        ],
+        "next_node": "$ending"
+      }
+    }
+  ],
+  "start": {
+    "hidden_fields": [
+      {
+        "key": "state"
+      }
+    ],
+    "next_node": "step_UJ67",
+    "coordinates": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "ending": {
+    "resume_flow": true,
+    "coordinates": {
+      "x": 1250,
+      "y": 0
+    }
+  }
+}
