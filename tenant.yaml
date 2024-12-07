@@ -557,7 +557,7 @@ tenant:
     revoke_refresh_token_grant: false
     disable_clickjack_protection_headers: false
   picture_url: https://ok2static.oktacdn.com/fs/bco/1/fs0103mxs2hl8ie170x8
-  sandbox_version: '12'
+  sandbox_version: '16'
   universal_login:
     colors:
       page_background: '#000000'
