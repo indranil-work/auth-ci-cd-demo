@@ -863,16 +863,6 @@ attackProtection:
         max_attempts: 50
         rate: 1200
 logStreams: []
-customDomains:
-  - domain: atko.twisec.com
-    primary: true
-    status: ready
-    tls_policy: recommended
-    type: auth0_managed_certs
-    verification:
-      methods:
-        - name: cname
-          record: ijdemo-cd-ugvxxb3qlqeceamu.edge.tenants.us.auth0.com
 themes:
   - borders:
       button_border_weight: 1
