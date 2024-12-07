@@ -564,8 +564,6 @@ tenant:
       primary: '#635dff'
     passwordless:
       allow_magiclink_verify_without_session: true
-emailProvider: {}
-emailTemplates: []
 clientGrants:
   - client_id: API Explorer Application
     audience: https://ijdemo.us.auth0.com/api/v2/
