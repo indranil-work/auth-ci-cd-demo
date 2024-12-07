@@ -930,11 +930,6 @@ themes:
 forms:
   - name: Blank form
     body: ./forms/Blank form.json
-  - name: Progressive Profiling
-    body: ./forms/Progressive Profiling.json
-flows:
-  - name: Update user_metadata
-    body: ./flows/Update_user_metadata.json
 flowVaultConnections:
   - name: REPLACE_WITH_M2M_CONNECTION
     app_id: AUTH0
