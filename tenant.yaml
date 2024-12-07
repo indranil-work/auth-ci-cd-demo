@@ -761,14 +761,6 @@ roles:
   - name: Test
     description: Test
     permissions: []
-branding:
-  colors:
-    page_background: '#000000'
-    primary: '#635dff'
-  logo_url: https://ok2static.oktacdn.com/fs/bco/1/fs0103mxs2hl8ie170x8
-  templates:
-    - template: universal_login
-      body: ./branding_templates/universal_login.html
 prompts:
   customText:
     en:
