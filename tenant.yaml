@@ -934,7 +934,7 @@ forms:
     body: ./forms/Progressive Profiling.json
 flows:
   - name: Update user_metadata
-    body: ./flows/Update user_metadata.json
+    body: ./flows/Update_user_metadata.json
 flowVaultConnections:
   - name: REPLACE_WITH_M2M_CONNECTION
     app_id: AUTH0
