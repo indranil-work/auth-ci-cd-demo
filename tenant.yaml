@@ -920,7 +920,7 @@ themes:
       header_text_alignment: center
       social_buttons_layout: bottom
 forms:
-  - name: Blank form
+  - name: Blank form 2
     body: ./forms/Blank form.json
 flowVaultConnections:
   - name: REPLACE_WITH_M2M_CONNECTION
