@@ -566,7 +566,7 @@ tenant:
       allow_magiclink_verify_without_session: true
 clientGrants:
   - client_id: API Explorer Application
-    audience: https://ijdemo-dev.us.auth0.com/api/v2/
+    audience: https://ijdemo-dev2.us.auth0.com/api/v2/
     scope:
       - read:client_grants
       - create:client_grants
@@ -709,7 +709,7 @@ clientGrants:
       - update:client_credentials
       - delete:client_credentials
   - client_id: Auth0 Management API (Test Application)
-    audience: https://ijdemo-dev.us.auth0.com/api/v2/
+    audience: https://ijdemo-dev2.us.auth0.com/api/v2/
     scope: []
   - client_id: Auth0 Management API (Test Application)
     audience: api://test/
@@ -719,7 +719,7 @@ clientGrants:
     scope:
       - test
   - client_id: auth0-account-link
-    audience: https://ijdemo-dev.us.auth0.com/api/v2/
+    audience: https://ijdemo-dev2.us.auth0.com/api/v2/
     scope:
       - read:connections
       - read:users
